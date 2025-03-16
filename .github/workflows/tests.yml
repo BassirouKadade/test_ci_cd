@@ -13,23 +13,26 @@ on:
 jobs:
   test:
     name: Run Vitest
-    runs-on: ubuntu-latest # Système d'exploitation de la machine virtuelle
+    runs-on: ubuntu-latest
 
     steps:
-      # Étape 1 : Récupérer le code du dépôt
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Étape 2 : Installer Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # Mise à jour pour correspondre à ta version locale
+          node-version: '22'
 
-      # Étape 3 : Installer les dépendances
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: npm install
 
-      # Étape 4 : Exécuter les tests
       - name: Run tests
         run: npm run test
