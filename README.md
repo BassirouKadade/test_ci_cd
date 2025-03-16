@@ -1,54 +1,18 @@
-# React + TypeScript + Vite
+# Test de CI/CD avec Vercel et GitHub Actions pour Tests Unitaires Automatisés
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Run Tests](https://github.com/BassirouKadade/test_ci_cd/actions/workflows/tests.yml/badge.svg)](https://github.com/BassirouKadade/test_ci_cd/actions/workflows/tests.yml)
 
-Currently, two official plugins are available:
+## Description
+Ce projet est une application React avec TypeScript, créée avec Vite, conçue pour démontrer une intégration continue (CI) et continue de déploiement (CD) utilisant **GitHub Actions** pour automatiser les tests unitaires avec **Vitest**, ainsi qu’un déploiement automatisé via **Vercel**. L’objectif est de valider le code avec des tests unitaires à chaque modification et de déployer l’application sur Vercel de manière fluide.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prérequis
+- [Node.js](https://nodejs.org/) (version 22 recommandée, compatible avec ce projet).
+- [npm](https://www.npmjs.com/) (inclus avec Node.js).
+- Un compte [GitHub](https://github.com/) pour configurer GitHub Actions.
+- Un compte [Vercel](https://vercel.com/) pour le déploiement.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Installation
+1. Clone le dépôt :
+   ```bash
+   git clone https://github.com/BassirouKadade/test_ci_cd.git
+   cd test_ci_cd
