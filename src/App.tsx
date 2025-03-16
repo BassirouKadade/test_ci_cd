@@ -1,19 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        Salut je suis kadade mahamadou bassioru bassioru
-        
-      </div>
-    </>
-  )
+    <div className="App">
+      <h1>Mon Projet React</h1>
+      <p>Bienvenue !</p>
+    </div>
+  );
 }
 
-export default App
+export default App;
