@@ -10,7 +10,7 @@ Ce projet est une application React avec TypeScript, créée avec Vite, conçue 
 - [npm](https://www.npmjs.com/) (inclus avec Node.js).
 - Un compte [GitHub](https://github.com/) pour configurer GitHub Actions.
 - Un compte [Vercel](https://vercel.com/) pour le déploiement.
-
+##Partie 2
 ## Installation
 1. Clone le dépôt :
    ```bash

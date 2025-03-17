@@ -7,7 +7,7 @@ describe("App Component", () => {
   it("renders the main elements correctly", () => {
     render(<App />);
 
-    expect(screen.getByText("Mes Taches")).toBeInTheDocument();
+    expect(screen.getByText("Mes Taches de la journée")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Ajouter une tâche...")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Catégorie (ex: perso, pro)")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Ajouter/i })).toBeInTheDocument();

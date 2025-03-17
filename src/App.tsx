@@ -56,7 +56,7 @@ const App: React.FC = () => {
       <div className="max-w-2xl mx-auto p-4">
         <Card className="mb-6">
           <CardHeader className="flex justify-between items-center">
-            <CardTitle className="text-2xl">Mes Taches</CardTitle>
+            <CardTitle className="text-2xl">Mes Taches de la journée</CardTitle>
             <ThemeToggle />
           </CardHeader>
           <CardContent>
